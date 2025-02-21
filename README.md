@@ -8,3 +8,10 @@
 
 ![Tabelas, colunas e relacionamento](modelagem-logica/Modelo-Logico.png)
 
+### Atividade 01
+
+#### conceitual
+![Entidades, atributos e relacionamento](modelagem-conceitual/01-atividade-conceitual.png)
+
+#### logica
+![Tabelas, colunas e relacionamento](modelagem-logica/Modelo-Logico.png)

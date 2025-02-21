@@ -15,3 +15,5 @@
 
 #### logica
 ![Tabelas, colunas e relacionamento](modelagem-logica/Modelo-Logico.png)
+
+![]()

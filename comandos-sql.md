@@ -48,3 +48,17 @@ ALTER TABLE produtos
     FOREIGN KEY (fabricante_id) REFERENCES fabricantes(id);
 
 ```
+
+### Exemplo de alterações estruturais em tabelas
+
+#### Adicionar coluna
+
+```sql
+ALTER TABLE produtos ADD quantidade INT NULL AFTER preco;
+```
+
+#### Renomear tabela
+
+```sql
+ALTER TABLE fabricantes RENAME TO fornecedores;
+```

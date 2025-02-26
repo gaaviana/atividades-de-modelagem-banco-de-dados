@@ -91,3 +91,22 @@ VALUES(
     7   -- Positivo
 );
 ```
+
+---
+
+## SELECT (Produtos)
+
+
+```sql
+-- lendo todas as colunas de todos os registros
+SELECT * FROM produtos;
+
+-- lendo somente nome e preco de todos os registros
+SELECT nome, preco FROM produtos;
+
+SELECT preco, nome FROM produtos;
+
+-- mostrar nome, preco e quanridade somente dos produtos que custam abaixo de 5000
+SELECT nome, preco, quantidade FROM produtos
+WHERE preco < 5000;
+```

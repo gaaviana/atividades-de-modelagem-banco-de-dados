@@ -109,4 +109,18 @@ SELECT preco, nome FROM produtos;
 -- mostrar nome, preco e quanridade somente dos produtos que custam abaixo de 5000
 SELECT nome, preco, quantidade FROM produtos
 WHERE preco < 5000;
+
+-- mini-exercicio: mostre o nome e descrição somente dos produtos da apple
+SELECT nome, descricao FROM produtos
+WHERE fabricante_id = 3
+```
+
+### Operadores Lógicos: E, OU e NÃO
+
+#### E (AND)
+
+```sql
+-- exibir nome e preco dos produtos que custam entre 2000 e 6000
+SELECT nome, preco FROM produtos
+WHERE preco >= 2000 AND  preco <= 6000;
 ```

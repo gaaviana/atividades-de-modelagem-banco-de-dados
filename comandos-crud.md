@@ -166,3 +166,17 @@ WHERE preco < 2000 AND fabricante_id != 8;
 
 ```
 
+--- 
+
+## DELETE (Fabricantes e produtos)
+
+**SEMPRE USE** a clausura `WHERE` em seu comando `UPDATE` especificando uma ou mais condições para a atualização.
+
+```sql
+DELETE FROM fabricantes WHERE id = 4;
+
+DELETE FROM produtos WHERE id = 4;
+
+DELETE FROM fabricantes WHERE id = 3;
+```
+

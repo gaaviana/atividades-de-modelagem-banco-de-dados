@@ -142,10 +142,27 @@ WHERE fabricante_id in(3, 5);
 ```sql
 -- todos os produtos exceto da positivo
 SELECT nome, descricao, preco FROM produtos
-WHERE NOT fabricante_id = 8;
+WHERE NOT fabricante_id = 7;
 
 -- versão usandi iperador relacional de "diferença/diferente"
 SELECT nome, descricao, preco FROM produtos
-WHERE fabricante_id != 8;
+WHERE fabricante_id != 7;
+```
+
+---
+
+## UPDATE (Fabricantes)
+
+**SEMPRE USE** a clausura `WHERE` em seu comando `UPDATE` especificando uma ou mais condições para a atualização.
+
+```sql
+-- trocar o nome fabricante
+UPDATE fabricantes SET nome = 'Asus do Brasil'
+WHERE id = 1;
+
+-- Alterar a quantidade para 10 dos produtos que custam abaixo de 2000 exceto da microsoft.
+UPDATE produtos SET quantidade = 10
+WHERE preco < 2000 AND fabricante_id != 8;
+
 ```
 

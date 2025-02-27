@@ -202,8 +202,20 @@ WHERE fabricantes_id = 5 ORDER BY quantidade;
 SELECT SUM(preco) FROM produtos;
 SELECT SUM(preco) AS Total FROM produtos; -- alias/apelido para coluna
 SELECT SUM(preco) AS "Total dos preços dos produtos" FROM produtos;  
+SELECT nome AS Produto, preco AS Preço FROM produtos;
 
 -- Funções de formatação
 SELECT FORMAT(SUM(preco), 2) AS Total FROM produtos;  
 SELECT REPLACE(FORMAT(SUM(preco), 2), ",", ".") AS Total FROM produtos;  
+
+-- Função de média: AVG(Average)
+-- Função de arredondamento: ROUND
+SELECT AVG(preco) AS "Média dos preços" FROM produtos
+SELECT ROUND(AVG(preco), 2) AS "Média dos preços" FROM produtos
+
+-- Função de contagem: COUNT
+SELECT COUNT(id) AS "Qtd de Produtos" FROM produtos;
+SELECT COUNT(DISTINCT fabricante_id) AS "Qtd de Fabricantes com Produtos" FROM produtos;
+
+SELECT nome, preco, quantidade, (preco * quantidade) AS total FROM produtos;
 ```

@@ -258,7 +258,7 @@ SELECT
     fabricantes.nome AS Fabricante,
     SUM(produtos.preco) AS Total,
     COUNT(produtos.fabricante_id) AS "Qtd de Produtos"
-FROM produtos JOIN fabricantes
+FROM produtos RIGHT JOIN fabricantes
 ON produtos.fabricante_id = fabricantes.id
 GROUP BY Fabricante
 ORDER BY Total;

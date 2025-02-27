@@ -180,3 +180,30 @@ DELETE FROM produtos WHERE id = 4;
 DELETE FROM fabricantes WHERE id = 3;
 ```
 
+---
+
+## SELECT
+
+### Classificação/Ordenação
+
+```sql
+-- DESC: ordena em ordem decrescente
+SELECT nome, preco FROM produtos ORDER BY nome;
+SELECT nome, preco FROM produtos ORDER BY preco;
+SELECT nome, preco FROM produtos ORDER BY preco DESC;
+
+SELECT nome, preco, quantidade FROM produtos
+WHERE fabricantes_id = 5 ORDER BY quantidade;
+```
+
+### Operações e funções de agregação
+
+```sql
+SELECT SUM(preco) FROM produtos;
+SELECT SUM(preco) AS Total FROM produtos; -- alias/apelido para coluna
+SELECT SUM(preco) AS "Total dos preços dos produtos" FROM produtos;  
+
+-- Funções de formatação
+SELECT FORMAT(SUM(preco), 2) AS Total FROM produtos;  
+SELECT REPLACE(FORMAT(SUM(preco), 2), ",", ".") AS Total FROM produtos;  
+```

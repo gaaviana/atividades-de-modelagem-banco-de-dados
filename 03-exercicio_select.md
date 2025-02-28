@@ -15,7 +15,7 @@ ORDER BY Filme ASC;
 SELECT
     filmes.titulo AS Filme,
     detalhes.sinopse AS Detalhes
-FROM filmes RIGHT JOIN detalhes
+FROM filmes JOIN detalhes
 ON detalhes.filme_id = filmes.id_filmes
 ORDER BY Filme ASC;
 ```
